@@ -1,33 +1,30 @@
-const codes = [
-  { code: "300KLIKESWOWTHANKU", level: "No level required" },
-  { code: "BOSSRUSHHEADSTART", level: "Level 5+" },
-  { code: "SUNGODVSDRAGON", level: "Level 10+" },
-  { code: "UPDATEISHERE", level: "Level 5+" },
-  { code: "HAPPYNEWYEARS", level: "Level 20+" }
-];
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Anime Crusaders Codes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-const codesDiv = document.getElementById("codes");
-const searchInput = document.getElementById("search");
+<header>
+  <h1>Anime Crusaders Codes</h1>
+  <p>All working Roblox codes</p>
+  <span id="updated"></span>
+</header>
 
-function showCodes(list) {
-  codesDiv.innerHTML = "";
-  list.forEach(item => {
-    const div = document.createElement("div");
-    div.className = "code-card";
-    div.innerHTML = `
-      <div class="code">${item.code}</div>
-      <div class="level">${item.level}</div>
-    `;
-    codesDiv.appendChild(div);
-  });
-}
+<main>
+  <input type="text" id="search" placeholder="Search codes...">
 
-searchInput.addEventListener("input", () => {
-  const value = searchInput.value.toLowerCase();
-  const filtered = codes.filter(c =>
-    c.code.toLowerCase().includes(value)
-  );
-  showCodes(filtered);
-});
+  <div id="codes"></div>
+</main>
 
-showCodes(codes);
+<footer>
+  <p>© 2026 | Kratos Codes</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
